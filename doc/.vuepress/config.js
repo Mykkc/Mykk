@@ -55,6 +55,7 @@ module.exports = config({
       }
     ],
     themeColor :false,
+    darkmode :'auto-switch',
     sidebar: [
         '/',
         {
@@ -182,7 +183,7 @@ module.exports = config({
     copyright: true,
 
     git: {
-      timezone: "Asia/Beijing",
+      contributor:false
     },
 
     mdEnhance: {
