@@ -100,7 +100,7 @@ module.exports = config({
           prefix: "/css/",
           collapsable:true,
           children: [
-            ''
+            'scss'
           ],
         },
         {
