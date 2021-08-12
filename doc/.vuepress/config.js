@@ -73,7 +73,7 @@ module.exports = config({
           prefix: "/vue/",
           collapsable:true,
           children: [
-            ''
+            'reactivity'
           ],
         },
         {
