@@ -26,3 +26,45 @@ class test {
 }
 const wwww = new test('cccc')
 wwww.say()
+function debounce(fn,delay=1000){
+    let timer=null
+    return function(){
+        console.log(11111)
+        if(timer){
+            clearTimeout(timer)
+            timer=setTimeout(fn,delay)
+        }else{
+            timer = setTimeout(fn,delay)
+        }
+    }
+}
+let a = setInterval(debounce(()=>{console.log(999)},500),300)
+setTimeout(()=>{
+    clearInterval(a)
+},5000)
+
+//最长字符串
+let str = 'pwwkewm'
+function te(m){
+    if(m.length=0) return 0
+    let str = m.split('')
+    let length=0
+    let arr=[]
+    for(i=0;i<str.length;i++){
+        arr.push(str[i])
+        for(j=1;j<str.length-i-1;j++){
+            if(str[i]!=str[j]&&!arr.includes(str[j])){
+                arr.push(str[j])
+            }else{
+                if(arr.length>length){
+                    length = arr.length
+                }
+                arr=[]
+            }
+        }
+    }
+    return length
+}
+console.log(te(str))
+console.log(te(''))
+console.log(te('cccc'))

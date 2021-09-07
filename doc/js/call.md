@@ -30,3 +30,35 @@ tag: javascript
     // 也可以在调用时传入参数
     person.say.bind(person2)('希望',3)     //老王说我今年22岁,在希望小学上3年级
 ```
+# 防抖和节流
++ 防抖对于短时间内连续触发的事件，防抖的含义就是让某个时间期限内，事件处理函数只执行一次。
+  ```JavaScript
+    debounce(fn,delay=1000){
+        let timer=null
+        return function(){
+            if(timer){
+                clearTimeout(timer)
+                timer=setTimeout(fn,delay)
+            }else{
+                timer = setTimeout(fn,delay)
+            }
+        }
+    }
+  ```
++ 节流就是让函数执行一次后，在某个时间段内暂时失效，过了这段时间后再重新激活（类似于技能冷却时间）
+```JavaScript
+    throttle(fn,delay=100){
+        let valid  = true
+        return function(){           
+            if(!valid){
+                return
+            }else{
+                valid = false
+                setTimeout(() => {
+                    fn()
+                    valid = true;
+                }, delay)            
+            }
+        }
+    }
+```
