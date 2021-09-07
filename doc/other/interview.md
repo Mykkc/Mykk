@@ -70,3 +70,18 @@ tag: box
 hash路由是利用 地址后面的#发送改变 每一次改变 hash（window.location.hash），都会在浏览器的访问历史中增加一个记录 
 可以通过`window.addEventListener("hashchange", funcRef, false)`监听hash改变
 history路由是利用了 HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法来改变url
+### 常见的设计模式有哪些
++ 工厂模式 最常见的模式 传入参数就可以创建实例
++ 单例模式 整个程序有切只有一个实例 例如 Vuex Vue-Router 等
++ 发布订阅 Vue的事件机制
++ 观察者模式 Vue的响应式原理
+### 浏览器缓存和http缓存
+#### 浏览器缓存 
+   主要是指localStorage sessionStorage cookie
++ localStorage 存在本地不会消失 除非用户主动删除, 最大5M
++ sessionStorage 存在本次回话中 标签页关闭 即被清除 不被共享 只在当前标签页有效 最大5M
++ cookie 可以在http请求中携带 最大4k
+#### http缓存
+   分为协商缓存和强缓存
++ 强缓存: 在设置的过期时间之内 不会向服务器发送请求 会读取本地缓存 直接返回200
++ 协商缓存: 浏览器会先向服务器发送请求 判断本地资源是否过期 如果没过期 服务器http状态码会返回304则从本地取数据 如果过期则返回数据
