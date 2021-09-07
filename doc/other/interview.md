@@ -66,3 +66,7 @@ tag: box
 ### Vue 响应式原理
 #### 数据劫持+观察者模式
 对象内部通过 defineReactive 方法，使用 Object.defineProperty 将属性进行劫持（只会劫持已经存在的属性），数组则是通过重写数组方法来实现。当页面使用对应属性时，每个属性都拥有自己的 dep 属性，存放他所依赖的 watcher（依赖收集），当属性变化后会通知自己对应的 watcher 去更新(派发更新)。
+### Vue的hash和history的区别
+hash路由是利用 地址后面的#发送改变 每一次改变 hash（window.location.hash），都会在浏览器的访问历史中增加一个记录 
+可以通过`window.addEventListener("hashchange", funcRef, false)`监听hash改变
+history路由是利用了 HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法来改变url
