@@ -85,3 +85,8 @@ history路由是利用了 HTML5 History Interface 中新增的 pushState() 和 r
    分为协商缓存和强缓存
 + 强缓存: 在设置的过期时间之内 不会向服务器发送请求 会读取本地缓存 直接返回200
 + 协商缓存: 浏览器会先向服务器发送请求 判断本地资源是否过期 如果没过期 服务器http状态码会返回304则从本地取数据 如果过期则返回数据
+### CommonJs和ES6 module的区别
++ CommonJs 是同步加载 运行时加载  ES6是在编译时加载
++ CommonJs 是值得拷贝 ES是值得引用
++ CommonJs 只能导出一个 ES可以导出多个
++ CommonJs 是动态语法可以写在判断里，ES6 Module 静态语法只能写在顶层
