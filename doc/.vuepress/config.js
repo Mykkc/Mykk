@@ -3,17 +3,16 @@ const { hopeTheme  } = require("vuepress-theme-hope");
 module.exports = {
   title: "Mykk",
   description: "Front end rookie",
-  // base:'./',
   dest: "./dist",
   lang: 'zh-CN',
   theme: hopeTheme({
-    logo: "/logo.png",
+    logo: "/logo.svg",
     hostname: "http://mykkk.cn",
     bgImage:'/doc/img/bg.jpg',
     author: "Mykk",
     themeColor :false,
     darkmode: 'toggle',
-    fullscreen:false,
+    fullscreen: false,
     navbar: [
       { text: "首页", link: "/", icon: "home" },
       {
@@ -27,7 +26,7 @@ module.exports = {
         link: "/about",
       }
     ],
-    iconPrefix:'fas fa-',
+    iconPrefix:'fa fa-',
     sidebar:'structure',
     plugins: {
       mdEnhance: {
@@ -38,10 +37,6 @@ module.exports = {
         tasklist:true
 
       }, 
-      git: {
-        contributor: false,
-        editLink:false
-      },
       blog: {
         intro:'/about'
       },
