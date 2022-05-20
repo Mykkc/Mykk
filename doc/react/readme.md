@@ -1,4 +1,6 @@
 ---
 icon: react
+index: false
+article: false
 ---
-# react
+# React

@@ -1,5 +1,6 @@
 ---
 icon: javascript
+index: false
+article: false
 ---
-# javascript
-+ 这里记录一些javascript
+# JS

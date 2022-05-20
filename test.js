@@ -104,3 +104,87 @@ function te(m){
 // console.log(te(str))
 console.log(te('c'))
 // console.log(te('cccc'))
+
+function getRandomInt(minNum,maxNum){
+    return Math.floor(Math.random()*(maxNum-minNum+1)+minNum)
+}
+function debounce2(fn,time) {
+    let timer =null
+    return function(){
+        if(timer){
+            clearTimeout(timer)
+            timer=setTimeout(fn,time)
+        }else{
+            timer=setTimeout(fn,time)
+        }
+    }
+}
+function throttle(fn,time){
+    let timer = true
+    if(!timer){
+        return
+    }else{
+        timer=false
+        setTimeout(()=>{
+            fn()
+            timer = true
+        },time)
+    }
+
+}
+0123
+
+str = "()({))"
+w = {
+    '(':')',
+    '{':'}',
+    '[':']',
+}
+function check(str){
+    let s = str
+    for(i=0;i<s.length;i++){
+        let m = s[i]
+        const arr=[]
+        switch (m) {
+            case '(':
+                arr.push(')')
+                break;
+            case '[':
+                arr.push(']')
+                break;
+            case '{':
+                arr.push('}')
+                break;
+            default:
+                if(m != arr.pop()){
+                    return false
+                }
+                break;
+        }
+        return arr.length===0
+    }
+}
+
+console.log(check(str))
+
+let obj = {
+    a:1,
+    b:2,
+    c:3,
+    d:4
+}
+for(i in obj){
+    console.log(i)
+}
+num = '512345196'
+for(i=0;i<str.length-1;i++){
+    const arr = [i]
+    let length=0
+    for(j=1;j<str.length-i-1;j++){
+        if(str[i]!==str[j]){
+            arr.push(str[j])
+        }else{
+            
+        }
+    }
+}

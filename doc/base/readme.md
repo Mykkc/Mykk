@@ -1,5 +1,6 @@
 ---
-icon: info
+icon: markdown
+index: false
+article: false
 ---
-# 基础用法
-
+# Markdown

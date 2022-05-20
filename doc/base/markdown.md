@@ -1,7 +1,7 @@
 ---
 icon: markdown
 ---
-# Markdown 相关语法
+# Markdown
 ## 一、标题
 ```
 # 这是一级标题

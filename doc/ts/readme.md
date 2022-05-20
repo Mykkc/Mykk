@@ -1,4 +1,6 @@
 ---
 icon: typescript
+index: false
+article: false
 ---
-# ts
+# Ts
